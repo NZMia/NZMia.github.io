@@ -1,25 +1,32 @@
 import React from 'react';
-import './App.css';
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import './App.scss';
+import { Navigate, RouterProvider, createHashRouter } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import Admin from './pages/Admin';
+import MainLayout from './layouts/MainLayout';
 import ProtectedRoutes from './utils/ProtectedRoute';
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: '/login',
-      element: <Login />,
-    },
-    {
-      path: '/signup',
-      element: <SignUp />,
-    },
+  const router = createHashRouter([
     {
       path: '/',
-      element: <Home />,
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: '/signup',
+          element: <SignUp />,
+        },
+        {
+          path: '/login',
+          element: <Login />,
+        },
+      ],
     },
     {
       path: '/admin',

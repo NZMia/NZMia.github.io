@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
 const ProtectedRoutes = () => {
-  const auth = true;
+  const auth = false;
 
   return auth ? <Outlet /> : <Navigate to='/login' replace />;
 };
