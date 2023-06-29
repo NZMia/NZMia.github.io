@@ -1,0 +1,20 @@
+{
+  "name": "NZMia.github.io",
+  "version": "1.0.0",
+  "description": "MERN Blog",
+  "main": "index.js",
+  "repository": "git@NZMia:NZMia/NZMia.github.io.git",
+  "author": "NZMia <mia7zwy@hotmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
