@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: $theme;
+  color: $primary;
+
+  &__nav {
+    height: 5rem;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer {
+    height: 5rem;
+  }
+}

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import generateRouterConfig from './routers/RouterConfig';
 import './App.scss';
 
 function App() {
@@ -9,20 +11,9 @@ function App() {
       .then((res) => res.json())
       .then((data) => setTestData(data.data));
   }, []);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{testData}</p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const routerConfig = generateRouterConfig();
+  const router = createBrowserRouter(routerConfig);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
