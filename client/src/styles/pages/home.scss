@@ -1,0 +1,16 @@
+.page__home {
+  img {
+    width: 18rem;
+  }
+  .img--dark {
+    color: $primary;
+  }
+  .img--light {
+    color: $secondary;
+  }
+
+  h2,
+  h3 {
+    margin: 0;
+  }
+}

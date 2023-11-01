@@ -1,0 +1,39 @@
+{
+  "name": "NZMia.github.io",
+  "version": "1.0.0",
+  "description": "MERN Blog",
+  "main": "index.js",
+  "repository": "git@NZMia:NZMia/NZMia.github.io.git",
+  "author": "NZMia <mia7zwy@hotmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client start\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "2.8.8"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.60.1",
+    "add": "^2.0.6",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "yarn": "^1.22.19"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,scss,less,md,ts,tsx}": "prettier --write"
+  }
+}

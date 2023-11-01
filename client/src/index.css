@@ -1,0 +1,14 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  font-family: 'code new roman', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'code new roman', 'Ubuntu', sans-serif;
+}

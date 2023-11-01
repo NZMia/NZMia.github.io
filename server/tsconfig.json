@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2017", "dom"],
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "experimentalDecorators":true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization" : false,
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["src"]
+    },
+    "noUnusedLocals": false,
+  },
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": ["node_modules"],
+}
