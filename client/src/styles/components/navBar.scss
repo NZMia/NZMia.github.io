@@ -1,0 +1,24 @@
+.navBar {
+  line-height: $headerFooterHeight;
+  display: flex;
+  justify-content: space-between;
+  margin: auto $gutter;
+
+  &__right {
+    display: flex;
+    gap: $gutter;
+  }
+  &__home {
+    @extend h3;
+  }
+  &__theme,
+  &__language,
+  &__menu {
+    @extend h4;
+  }
+
+  &__menu {
+    display: flex;
+    gap: $gutter * 2;
+  }
+}

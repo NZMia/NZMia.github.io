@@ -10,7 +10,7 @@ const MainLayout = () => (
     <div className="main__content">
       <Outlet />
     </div>
-    <div className="main__footer">footer</div>
+    <div className="main__footer">Copyright © {new Date().getFullYear()} Developed by Mia</div>
   </div>
 );
 

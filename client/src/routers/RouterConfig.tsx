@@ -2,6 +2,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
 import Admin from '../pages/Admin';
+import About from '../pages/About';
 import PageNotFound from '../pages/PageNotFound';
 import MainLayout from '../layouts/MainLayout';
 import ProtectedRoutes from './ProtectedRoute';
@@ -23,6 +24,16 @@ const generateRouterConfig = () => [
       {
         path: Routers.SIGNUP,
         element: <SignUp />,
+      },
+    ],
+  },
+  {
+    path: Routers.ABOUT,
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <About />,
       },
     ],
   },
